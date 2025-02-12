@@ -9,7 +9,7 @@ A variation of an example from "Deep Learning : Goodfellow / Bengio / Courville"
 Using the sigmoid activation function:
 
 $$
-\sigma(Z)=\frac{1}{1 + \exp \\{-Z\\} }
+\sigma(Z)=\frac{1}{1 + \exp (-Z) }
 $$
 
 which comes from `scipy.special` as `expit`
@@ -32,7 +32,7 @@ We need the derivative of the loss function with respect to the input to the act
 
 $$
 \frac{\partial L }{\partial Z} = \big(\frac{\partial L}{\partial \hat{y}}\big)\times\big(\frac{d\hat{y}}{dz}\big) = 
-\big(\frac{\exp\{-Z\}}{1 + \exp\{-Z\}}\big)\times\big(\frac{1}{1 + \exp\{-Z\}}\big) = (1-\hat{y})\times \hat{y}
+\big(\frac{\exp(-Z)}{1 + \exp(-Z)}\big)\times\big(\frac{1}{1 + \exp(-Z)}\big) = (1-\hat{y})\times \hat{y}
 $$
 
 The work for this is shown below:
