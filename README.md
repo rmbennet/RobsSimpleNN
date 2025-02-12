@@ -9,12 +9,12 @@ A variation of an example from "Deep Learning : Goodfellow / Bengio / Courville"
 Using the sigmoid activation function:
 
 $$
-\sigma(Z)=\frac{1}{1 + \exp \{-Z\} }
+\sigma(Z)=\frac{1}{1 + \exp \\{-Z\\} }
 $$
 
 which comes from `scipy.special` as `expit`
 
-testing $\\{$
+
 
 
 
