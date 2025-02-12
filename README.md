@@ -11,6 +11,7 @@ Using the sigmoid activation function:
 $$
 \sigma(Z)=\frac{1}{1 + \exp\{-Z\}}
 $$
+
 which comes from `scipy.special` as `expit`
 
 ### Loss function
