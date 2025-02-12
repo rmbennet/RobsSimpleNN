@@ -23,7 +23,7 @@ class Linear():
         #sample from the standard normal distribution
         #quantity of weights = num_inputs:
         #initialized as a column vector:
-        self.weights = np.random.randn(num_neurons,num_features)
+        self.weights = np.random.randn(num_neurons,num_features) *0.01
         self.bias = np.random.randn(num_neurons)
 
 
@@ -53,7 +53,7 @@ class Linear():
         #need to specify an axis for softmax!
 
         #clip the predictions to avoid numerical instability near log(0) and log(1)
-        y = np.clip(np.array(y),1e-10,1-1e-10)
+        y = np.clip(np.array(y),1e-3,1-1e-3)
         
         y_pred = softmax(y,axis=1)
 
