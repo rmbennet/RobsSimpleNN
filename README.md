@@ -14,11 +14,7 @@ $$
 
 which comes from `scipy.special` as `expit`
 
-`\{` and `\}`
-
-\[
-\{ x \}
-\]
+testing $\\{$
 
 
 
