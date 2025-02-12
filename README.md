@@ -14,6 +14,15 @@ $$
 
 which comes from `scipy.special` as `expit`
 
+`\{` and `\}`
+
+\[
+\{ x \}
+\]
+
+
+
+
 ### Loss function
 
 Since this is a  binary classification problem with a sigmoid activation function, the loss function of choice is the *binary cross-entropy loss*
