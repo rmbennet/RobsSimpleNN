@@ -42,3 +42,8 @@ The work for this is shown below:
 More work on some of the derivatives and connecting them with model structure:
 
 ![More Derivative Work](readme_images/derivative_work_2.jpg)
+
+
+### Things to do/make:
+
+ - py file that has the 
