@@ -1,21 +1,16 @@
 import numpy as np
 
 #activation function
-from scipy.special import softmax
+from scipy.special import expit
 
 
 class Linear():
-    def __init__(self, num_features=2,num_neurons=2):
+    def __init__(self, num_features=2,num_neurons=1):
 
         ''' 
-        2 neurons each having:
-            - 2 weights
-            - 1 bias
-
         Note the structure here when doing the linear transformation
         the number biases is equal to num_neurons
         '''
-
         #---------------------------------------
         #RANDOMLY INITIALIZE WEIGHTS AND BIASES:
         #---------------------------------------
@@ -23,7 +18,7 @@ class Linear():
         #sample from the standard normal distribution
         #quantity of weights = num_inputs:
         #initialized as a column vector:
-        self.weights = np.random.randn(num_neurons,num_features) *0.01
+        self.weights = np.random.randn(num_neurons,num_features)
         self.bias = np.random.randn(num_neurons)
 
 
@@ -39,23 +34,22 @@ class Linear():
         perform a linear transformation on the input, then do a sigmoid
         activation on it
         '''
-        #ensure inputs is a numpy array:
-        self.inputs = np.array(inputs)
         #---------------------------------------
         #LINEAR TRANSFORMATION:
         #---------------------------------------
-        y = (inputs@ self.weights + self.bias)
+
+        y = (inputs@ self.weights.T + self.bias)
+
     
         #---------------------------------------
-        #SOFTMAX ACTIVATION:
+        #SIGMOID ACTIVATION:
         #---------------------------------------
         
         #need to specify an axis for softmax!
 
-        #clip the predictions to avoid numerical instability near log(0) and log(1)
-        y = np.clip(np.array(y),1e-3,1-1e-3)
+        #clip the predictions to avoid numerical instability near log(0) and log(1
         
-        y_pred = softmax(y,axis=1)
+        y_pred = expit(y)
 
         return y_pred
     
