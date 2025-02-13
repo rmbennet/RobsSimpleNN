@@ -4,7 +4,7 @@ A variation of an example from "Deep Learning : Goodfellow / Bengio / Courville"
 
 In the spirit of getting a very simple neural network up and running, this project seeks to learn the basic operators such as `AND` , `OR` , and `NOT` with a single linear layer.  These are linearly separable.
 
-Because they are linearly separable, a single linear layer should be fine.  Because of our choice of loss function, we will instead try it with a linear layer, followed by a softmax.  Here is the network structure:
+Because they are linearly separable, a single linear layer should be fine.  Because of our choice of loss function, we will instead try it with a linear layer, followed by a sigmoid.  Here is the network structure:
 
 ![Basic Network Structure](readme_images/network_structure.jpeg)
 
