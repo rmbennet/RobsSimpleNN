@@ -1,6 +1,10 @@
-# Learning XOR using a simple neural network:
+# Learning simple boolean operators using a simple neural network:
 
-A variation of an example from "Deep Learning : Goodfellow / Bengio / Courville" Chapter 6.  A basic diagram of the simple network structure:
+A variation of an example from "Deep Learning : Goodfellow / Bengio / Courville" Chapter 6.  In that example, they show how XOR cannot be learned using only linear methods because it is not linearly separable.  
+
+In the spirit of getting a very simple neural network up and running, this project seeks to learn the basic operators such as `AND` , `OR` , and `NOT` with a single linear layer.  These are linearly separable.
+
+Because they are linearly separable, a single linear layer should be fine.  Because of our choice of loss function, we will instead try it with a linear layer, followed by a softmax.  Here is the network structure:
 
 ![Basic Network Structure](readme_images/network_structure.jpeg)
 
@@ -42,8 +46,3 @@ The work for this is shown below:
 More work on some of the derivatives and connecting them with model structure:
 
 ![More Derivative Work](readme_images/derivative_work_2.jpg)
-
-
-### Things to do/make:
-
- - py file that has the 
